@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entregable 6</title>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+  integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container m-5">
+    <div class="container m-5">
+      <form class= "border border-dark rounded-lg0" id="productForm">
+        <h3 class="text-primary m-4">Ingresar Producto:</h3>
+        <div class="form-group m-4">
+          <label for="nombre" class="font-weight-bold"> Nombre:</label>
+          <input id="nombre" class="form-control" type="text" name="title" required>
+        </div>
+        <div class="form-group m-4">
+          <label for="precio" class="font-weight-bold"> Precio:</label>
+          <input id="precio" class="form-control" type="number" step:"0.01" name="price" required>
+        </div>
+        <div class="form-group m-4">
+          <label for="foto" class="font-weight-bold"> URL de la imagen:</label>
+          <input id="foto" class="form-control" type="url" name="thumbnail" required>
+        </div>
+        <div class="form-group m-4">
+          <button class="btn btn-primary rounded mb-4 mll-4 px-3 py-2" id="send" type="submit">ENVIAR</button>
+        </div>
+      </form>
+    </div>
+    <div class="container m-5">
+      <div class="mt-5">
+        <div class="table-responsive mt- rounded-lg">
+          <h3 class="text-danger">Lista de Productos</h3>
+          <table class="table table-dark rounded-lg">
+            <thead>
+              <tr>
+                <th>Nombre:</th>
+                <th>Precio:</th>
+                <th>Foto:</th>
+              </tr>
+            </thead>
+            <tbody id="productsTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <div class="container m-5">
+    <div class="border border-dark rounded-lg0">
+      <div class="form-group m-4">
+        <h3 class="text-primary"> Centro de Mensajes: </h3>
+        <label for="user" class="font-weight-bold">Usuario:</label>
+        <input type="text" id="user" class="form-control w-75 mb-2 mr-2" placeholder="Nombre de usuario...">
+        
+        <hr>
+        <div class="my-3" id="mensajes"></div>
+
+        <form autocomplete="off" id="messageForm">
+          <div class="form-group">
+            <input id="msg" type="text" class="form-control w-75 mb-2 mr-2" placeholder="Escribí un mensaje...">
+            <button class="btn btn-primary" id="send" type="submit">ENVIAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/sockets.js"></script>
+</div>
+</body>

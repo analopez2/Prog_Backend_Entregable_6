@@ -1,0 +1,30 @@
+{
+  "name": "entregable-4-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon --inspect ./src/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "socket.io": "^4.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/analopez2/entregable_6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/analopez2/entregable_6/issues"
+  },
+  "homepage": "https://github.com/analopez2/entregable_6#readme"
+}
